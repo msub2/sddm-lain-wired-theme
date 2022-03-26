@@ -18,7 +18,6 @@ Rectangle {
 		}
 
 		onLoginFailed: {
-			denied.play()
 		}
 	}
 
@@ -38,12 +37,6 @@ Rectangle {
 			width: 192
 			height: 192
 			source: "WiredLogIn.gif"
-		}
-		AnimatedImage{
-			Layout.alignment: Qt.AlignCenter
-			Layout.bottomMargin: 20
-			height: 50
-			source: "whoIsUser.gif"
 		}
 		Qqc.Label {
 			Layout.alignment: Qt.AlignCenter
@@ -180,21 +173,6 @@ Rectangle {
 		textColor: "#c1b492"
 		arrowIcon: "angle-down.png"
 		KeyNavigation.backtab: password; KeyNavigation.tab: rebootBtn;
-	}
-	Audio {
-		id: bgMusic
-		source: "bg_music.wav"
-		autoPlay: true
-		loops: Audio.Infinite
-	}
-	Audio {
-		id: welcome
-		source: "welcome.wav"
-		autoPlay: true
-	}
-	Audio {
-		id: denied
-		source: "denied.wav"
 	}
 
 	Component.onCompleted: {
